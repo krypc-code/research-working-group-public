@@ -20,4 +20,4 @@ jobs:
     - name: install dependencies
       run: |
         npm install
-        npm build
+        npm run-script build
