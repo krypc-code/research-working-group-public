@@ -31,7 +31,9 @@ jobs:
 #install the build dependencies          
     - name: install dependencies
 #       if: steps.myCacheStep.outputs.cache-hit != 'true'
-      run: npm install
+      run: |
+        npm install
+        npm update
 
 #Build the project          
     - name: Build
