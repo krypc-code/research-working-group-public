@@ -37,7 +37,6 @@ jobs:
       if: steps.myCacheStep.cache-hit != 'true'
       run: |
         npm install
-        npm run-script build
 
 #Build the project          
     - name: Build
