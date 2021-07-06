@@ -35,14 +35,14 @@ jobs:
         npm install
 #        npm update
 
-#Test the project          
-    - name: Test
-      run: npm test
       
 #Build the project          
     - name: Build
       run: npm run-script build
-        
+
+#Test the project          
+    - name: Test
+      run: npm test
 
 # artifacts        
     - name: Archive build
