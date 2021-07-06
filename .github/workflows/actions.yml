@@ -18,4 +18,4 @@ jobs:
       with:
         node-version: '12.x'
     - name: install dependencies
-      run: install npm
+      run: npm install
