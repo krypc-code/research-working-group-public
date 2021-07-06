@@ -17,7 +17,26 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '14.x'
+
+# Cache dependencies       
+    - name: cache
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+#install the build dependencies          
     - name: install dependencies
       run: |
         npm install
         npm run-script build
+
+# artifacts        
+    - name: Archive build
+      if: success()
+      uses: actions/upload-artifact@v1
+      with:
+        name: deploy_dist
+        path: dist
