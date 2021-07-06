@@ -30,7 +30,7 @@ jobs:
 
 #install the build dependencies          
     - name: install dependencies
-      if: steps.myCacheStep.outputs.cache-hit != 'true'
+#       if: steps.myCacheStep.outputs.cache-hit != 'true'
       run: npm install
 
 #Build the project          
