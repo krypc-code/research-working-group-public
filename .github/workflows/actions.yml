@@ -35,13 +35,12 @@ jobs:
 #install the build dependencies          
     - name: install dependencies
       if: steps.myCacheStep.cache-hit != 'true'
-      run: |
-        npm install
+      run: npm install
 
 #Build the project          
     - name: Build
-      run: |
-        npm run-script build
+      run: npm run-script build
+        
 
 # artifacts        
     - name: Archive build
