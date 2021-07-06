@@ -13,9 +13,11 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Use Node 12.x
+    - name: Use Node 14.x
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '14.x'
     - name: install dependencies
-      run: npm install
+      run: |
+        npm install
+        npm build
