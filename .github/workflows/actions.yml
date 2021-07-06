@@ -33,16 +33,16 @@ jobs:
 #       if: steps.myCacheStep.outputs.cache-hit != 'true'
       run: |
         npm install
-#        npm update
+        npm update
 
       
 #Build the project          
     - name: Build
       run: npm run-script build
 
-#Test the project          
-    - name: Test
-      run: ng test
+# #Test the project  *Do not run this*        
+#     - name: Test
+#       run: ng test
 
 # artifacts        
     - name: Archive build
