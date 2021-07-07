@@ -43,7 +43,6 @@ jobs:
 # artifacts        
     - name: Archive build
       if: success()
-      needs: Build
       uses: actions/upload-artifact@v1
       with:
         name: deploy_dist
