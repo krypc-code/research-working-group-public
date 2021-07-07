@@ -1,0 +1,22 @@
+name: Build and test - YARN
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: setup node
+        uses: actions/setup-node@v1.4.1
+        with:
+          node-version: 14
+      - name: install packages
+        run: yarn install
+      - name: check linting
+        run: yarn lint
+      - name: test
+        run: yarn test
