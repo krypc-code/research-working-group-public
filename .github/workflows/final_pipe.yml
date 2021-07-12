@@ -36,10 +36,6 @@ jobs:
     - name: Build
       run: npm run build:ci
 
-# #Test the project  *Do not run this*        
-#     - name: Test
-#       run: npm run test:ci
-
 # artifacts        
     - name: Archive build
       if: success()
