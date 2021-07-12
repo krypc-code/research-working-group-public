@@ -42,7 +42,8 @@ jobs:
 
 # #Test the project  *Do not run this*        
 #     - name: Test
-#       run: ng test
+#       run: ng test 
+# need to fix and run
 
 # artifacts        
     - name: Archive build
