@@ -28,18 +28,23 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
 #install the build dependencies          
-    - name: install dependencies
-#       if: steps.myCacheStep.outputs.cache-hit != 'true'
-      run: npm ci
+    - name: cd to directory
+      run: |
+        cd src
+        ls
+#     - name: install dependencies
+# #       if: steps.myCacheStep.outputs.cache-hit != 'true'
+#       run: npm ci
               
-#Build the project          
-    - name: Build
-      run: npm run build:ci
+# #Build the project          
+   
+#     - name: Build
+#       run: npm run build:ci
 
-# artifacts        
-    - name: Archive build
-      if: success()
-      uses: actions/upload-artifact@v1
-      with:
-        name: deploy_dist
-        path: dist
+# # artifacts        
+#     - name: Archive build
+#       if: success()
+#       uses: actions/upload-artifact@v1
+#       with:
+#         name: deploy_dist
+#         path: dist
