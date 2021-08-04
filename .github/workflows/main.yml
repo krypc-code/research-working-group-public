@@ -29,4 +29,9 @@ jobs:
       - name: Check out my other private repo
         uses: actions/checkout@master
         with:
-          repository: krypc-code/research-working-group-public
+          repository: krypc-code/research-working-group
+      - name: Check out new repo details
+        run: |
+          cd /home/runner/work/research-working-group/research-working-group
+          ls
+          
