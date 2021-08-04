@@ -30,3 +30,5 @@ jobs:
         run: |
           pwd
           ls
+          cd /home/runner/work/taxchain-platform/taxchain-platform
+          ls
