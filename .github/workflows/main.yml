@@ -26,9 +26,7 @@ jobs:
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          pwd
-          ls
-          cd /home/runner/work/taxchain-platform/taxchain-platform
-          ls
+      - name: Check out my other private repo
+        uses: actions/checkout@master
+        with:
+          repository: krypc-code/research-working-group-public
