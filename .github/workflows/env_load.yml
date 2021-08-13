@@ -12,11 +12,17 @@ jobs:
         id: checkout
         uses: actions/checkout@v2
         
-      - name: env.loading
-        id: dotenv
-        uses: ./.github/actions/dotenv-action
+      - name: Load .env file
+        uses: xom9ikk/dotenv@v1.0.2
+        with:
+          path: ./.env
+          mode: development
+
+      - name: Some other action
+        run: |
+          echo "Variable 1: ${{ env.values }}"
           
         
-      # You should see your .env config in 'env'
-      - name: "Print values"
-        run: echo {{ steps.dotenv.outputs.values }}
+#       # You should see your .env config in 'env'
+#       - name: "Print values"
+#         run: echo {{ steps.dotenv.outputs.values }}
