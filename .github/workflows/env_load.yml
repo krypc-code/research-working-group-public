@@ -20,7 +20,7 @@ jobs:
 
       - name: Some other action
         run: |
-          echo "Variable 1: ${{ env.values }}"
+          echo "Variable 1: ${{ env.value }}"
           
         
 #       # You should see your .env config in 'env'
