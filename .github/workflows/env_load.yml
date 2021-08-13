@@ -1,0 +1,27 @@
+name: Load env.file
+on: 
+  push:
+    [main]
+  pull:
+    [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      -   name: "Checkout"
+          id: checkout
+          uses: actions/checkout@v2
+
+      - name: "Launch action"
+        uses: Steph0/dotenv-configserver
+        with:
+          repository: "krypc-code/research-working-group-public"
+          
+      
+      # You should see your .env config in 'env'
+      - name: "See exported values"
+        run: env
+        
+      # You should see your .env config in 'env'
+      - name: "Print values"
+        run: echo env.value
