@@ -1,9 +1,9 @@
 name: Load env.file
-on: 
+on:
   push:
-    [main]
-  pull:
-    [main]
+    branches: main
+  pull_request:
+    branches: main
 jobs:
   test:
     runs-on: ubuntu-latest
